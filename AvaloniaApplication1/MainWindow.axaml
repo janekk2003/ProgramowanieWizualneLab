@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaApplication1.MainWindow"
+        Title="Kalkulator" Width="300" Height="400">
+    
+    <Grid RowDefinitions="Auto,*">
+        <!-- Pole tekstowe do wyświetlania wyniku -->
+        <TextBlock Name="Display" Text="0" FontSize="24" 
+                   HorizontalAlignment="Right" Margin="10" 
+                   Grid.Row="0"/>
+
+        <!-- Kontener na przyciski -->
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*"
+              RowDefinitions="*,*,*,*,*" Margin="5">
+            
+            <!-- Cyfry -->
+            <Button Grid.Row="3" Grid.Column="0" Content="1" Click="OnButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="2" Click="OnButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="3" Click="OnButtonClick"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Content="4" Click="OnButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="5" Click="OnButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="6" Click="OnButtonClick"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Content="7" Click="OnButtonClick"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="8" Click="OnButtonClick"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="9" Click="OnButtonClick"/>
+            <Button Grid.Row="4" Grid.Column="1" Content="0" Click="OnButtonClick"/>
+            
+            <!-- Operatory -->
+            <Button Grid.Row="1" Grid.Column="3" Content="+" Click="OnButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="-" Click="OnButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="*" Click="OnButtonClick"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="/" Click="OnButtonClick"/>
+
+            <!-- Równa się -->
+            <Button Grid.Row="4" Grid.Column="2" Content="=" Click="OnButtonClick"/>
+            
+            <!-- C (czyści ekran) -->
+            <Button Grid.Row="4" Grid.Column="0" Content="C" Click="OnButtonClick"/>
+        </Grid>
+    </Grid>
+</Window>
